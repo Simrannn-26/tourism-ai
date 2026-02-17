@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Trip | TravelMate</title>
+  <link rel="stylesheet" href="trip.css" />
+</head>
+<body>
+
+<header class="trip-header">
+  <h1>Your Journey</h1>
+</header>
+
+<section class="trip-container">
+
+  <div class="map-box">
+    <iframe
+      src="https://www.google.com/maps?q=India&z=5&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="trip-details">
+
+    <div class="card">
+      <h3>📍 Route</h3>
+      <p id="routeText"></p>
+    </div>
+
+    <div class="card">
+      <h3>🚦 Choose Transport</h3>
+      <div class="transport-options">
+        <div class="transport-card">✈ Airways</div>
+        <div class="transport-card">🚗 Roadways</div>
+        <div class="transport-card">🚆 Railways</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📅 Travel Dates</h3>
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+    </div>
+
+  </div>
+</section>
+
+<script src="trip.js"></script>
+</body>
+</html>

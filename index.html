@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TravelMate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="logo">TravelMate</div>
+
+  <nav class="nav">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#" class="nav-link">Plan</a>
+    <a href="#" class="nav-link">Ask AI</a>
+    <a href="#" class="nav-link translate">Translate</a>
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Explore India, one state at a time</h1>
+    <p>
+Step into a land where every journey unfolds a new story and every destination feels like a world of its own. 
+  India is a breathtaking tapestry of majestic mountains, serene rivers, golden deserts, lush forests, and vibrant 
+  coastlines, all woven together with centuries of culture, heritage, and tradition. From the snow-kissed peaks of 
+  the Himalayas to the tranquil backwaters of Kerala, from the royal palaces of Rajasthan to the lively streets of 
+  historic cities, India offers an experience that is as diverse as it is unforgettable. Each state reflects its own 
+  unique charm through its cuisine, festivals, architecture, and local traditions, inviting travelers to explore beyond 
+  the ordinary. Rich in history, natural beauty, and warm hospitality, India is not just a destination but an immersive 
+  journey of discovery, inspiration, and timeless memories waiting to be experienced, one state at a time.
+    </p>
+  </div>
+
+  <div class="map-wrapper"></div>
+  <div id="tooltip"></div>
+</section>
+
+<!-- ================= ABOUT (UNCHANGED) ================= -->
+<section class="about" id="about">
+  <h2>About Incredible India</h2>
+
+  <p class="about-text">
+    Welcome to a land where antiquity meets ambition. India is not just a destination;
+    it is a profound sensory experience that stays with you forever. From the silent,
+    snow-clad peaks of the Himalayas to the rhythmic backwaters of Kerala, every mile
+    tells a different story in a different tongue.
+  </p>
+
+  <p class="about-text">
+    As the world’s largest democracy and one of its fastest-growing economies, India
+    is a bridge between eras. It is a place where you can witness 5,000-year-old Vedic
+    chants in Varanasi and explore cutting-edge tech hubs in Bengaluru all in the same
+    journey.
+  </p>
+
+  <p class="about-text">
+    Our culture is built on the foundation of <strong>Atithi Devo Bhava</strong> — the
+    belief that “The Guest is God” — ensuring that every visitor is met with
+    unparalleled warmth and hospitality. Whether it is the architectural majesty of
+    the Taj Mahal or the kaleidoscope of colors during Holi, India invites you to lose
+    yourself in its beauty and find yourself in its soul.
+  </p>
+</section>
+
+<!-- ================= CHATBOT ================= -->
+<div id="chatbot-btn">🤖</div>
+
+<div id="chatbot">
+  <div class="chat-header">AI Travel Assistant</div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-input">
+    <input id="chatInput" placeholder="Ask about your trip..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- ================= PLAN MODAL ================= -->
+<div class="plan-overlay" id="planOverlay">
+  <div class="plan-modal">
+
+    <div class="plan-header">
+      <h2>Plan Your Journey</h2>
+      <span class="close-plan" id="closePlan">X</span>
+    </div>
+
+    <!-- FROM -->
+    <div class="plan-section">
+      <label>From</label>
+      <input
+        class="input"
+        id="fromCity"
+        type="text"
+        placeholder="Type starting city"
+        autocomplete="off"
+      />
+      <div class="suggestions" id="fromSuggestions"></div>
+    </div>
+
+    <!-- TO -->
+    <div class="plan-section">
+      <label>To</label>
+      <input
+        class="input"
+        id="toCity"
+        type="text"
+        placeholder="Type destination city"
+        autocomplete="off"
+      />
+      <div class="suggestions" id="toSuggestions"></div>
+    </div>
+
+    <!-- MULTI CITY -->
+    <div class="plan-section">
+      <label>Planning multiple destinations?</label>
+      <select class="input" id="multiCity">
+        <option>No</option>
+        <option>Yes</option>
+      </select>
+    </div>
+
+    <!-- PEOPLE -->
+    <div class="plan-section">
+      <label>Travellers</label>
+      <select class="input" id="people">
+        <option>Solo</option>
+        <option>Couple</option>
+        <option>Family</option>
+        <option>Friends</option>
+      </select>
+    </div>
+
+    <!-- BUDGET -->
+    <div class="plan-section">
+      <label>Budget Preference</label>
+      <select class="input" id="budget">
+        <option>Budget</option>
+        <option>Comfortable</option>
+        <option>Premium</option>
+      </select>
+    </div>
+
+    <button class="build-trip" id="buildTripBtn">
+      Build the Trip
+    </button>
+
+  </div>
+</div>
+
+<!-- ================= SCRIPT (MUST BE LAST) ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
